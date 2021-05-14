@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "cf56bc5b-41aa-46e7-8985-b35a8fb0926c",
+		"name": "BRS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "chienle",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "chienktv90@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "c_password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/brs/public/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"brs",
+								"public",
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "chienktv90@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/brs/public/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"brs",
+								"public",
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "List Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWFkNmQ4YzEyZTI4NDFmNDJhMGMyMjljNzRiOTQ3MmE3YmYyYTcxOTFlMzNjOWZjMTM2MDU0NDg1MjkwMjBlNjZlNzZkZmEzYTk4M2I5ZTQiLCJpYXQiOjE2MjA5MTM4NDQsIm5iZiI6MTYyMDkxMzg0NCwiZXhwIjoxNjUyNDQ5ODQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kOz5pMvLbAfsih7Gqig_bco-YclF5c6y5vGnOWMDBNHZFlrl5f6vgOzdFz1b1JGb1docINyP6kUxJBg4_mXnhuy5ETnWxS3T_K6RIjNi_gHs3DK4O_ztBQcHuH4tmUKnyu4IwAenISXA38Okkh165N5rdV0kedLg3xBLY2WppJ_4gpD7ANwxGle3mOEMw6Ra9525n4bZjYoGwGhkxdYX9xZdTtxdv6BvjmRLazV0K5T_a2TdvdCKLx6Cn1TbHFkq6O-6kD-g4QarvDG-4QcJjLmd_TmP6BReelUI0s30YhsI61A7VYK-N-MiQyCIu8hDnsMrUUbfJn2WalnLDoqbhVotNZ4xUBGN386NahJGF9xI-TChXo1wufoIbxXJ6RPI57qpJaUHwA3Qhqb_m7206vD3uOzYQ2dGfRyFIr-ETHqjgMCOxy9zTeTlat90yHghZwOhw5niPW4PZ-blBz8i2PayrguwybZ_GZgjXwjKdZLmQDlupwoBiOVZFG6yOWD7q9ZKpZ2ejoyZkGOsdyq3U0sZKc1NPH_TqyIl61fXr4crewlylNihcnAv0eTLO-bR6hkbfWstRzGDobsoHRIc-Zx_WJ5EdKqdmiVGdck7BcLwHZ21bV-IR7iU0VIrzQX03zaBIWOpbKEj26aUUrOyit1RNgPeMOQpKQhvzv6UQ-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWFkNmQ4YzEyZTI4NDFmNDJhMGMyMjljNzRiOTQ3MmE3YmYyYTcxOTFlMzNjOWZjMTM2MDU0NDg1MjkwMjBlNjZlNzZkZmEzYTk4M2I5ZTQiLCJpYXQiOjE2MjA5MTM4NDQsIm5iZiI6MTYyMDkxMzg0NCwiZXhwIjoxNjUyNDQ5ODQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kOz5pMvLbAfsih7Gqig_bco-YclF5c6y5vGnOWMDBNHZFlrl5f6vgOzdFz1b1JGb1docINyP6kUxJBg4_mXnhuy5ETnWxS3T_K6RIjNi_gHs3DK4O_ztBQcHuH4tmUKnyu4IwAenISXA38Okkh165N5rdV0kedLg3xBLY2WppJ_4gpD7ANwxGle3mOEMw6Ra9525n4bZjYoGwGhkxdYX9xZdTtxdv6BvjmRLazV0K5T_a2TdvdCKLx6Cn1TbHFkq6O-6kD-g4QarvDG-4QcJjLmd_TmP6BReelUI0s30YhsI61A7VYK-N-MiQyCIu8hDnsMrUUbfJn2WalnLDoqbhVotNZ4xUBGN386NahJGF9xI-TChXo1wufoIbxXJ6RPI57qpJaUHwA3Qhqb_m7206vD3uOzYQ2dGfRyFIr-ETHqjgMCOxy9zTeTlat90yHghZwOhw5niPW4PZ-blBz8i2PayrguwybZ_GZgjXwjKdZLmQDlupwoBiOVZFG6yOWD7q9ZKpZ2ejoyZkGOsdyq3U0sZKc1NPH_TqyIl61fXr4crewlylNihcnAv0eTLO-bR6hkbfWstRzGDobsoHRIc-Zx_WJ5EdKqdmiVGdck7BcLwHZ21bV-IR7iU0VIrzQX03zaBIWOpbKEj26aUUrOyit1RNgPeMOQpKQhvzv6UQ-Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/brs/public/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"brs",
+								"public",
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWFkNmQ4YzEyZTI4NDFmNDJhMGMyMjljNzRiOTQ3MmE3YmYyYTcxOTFlMzNjOWZjMTM2MDU0NDg1MjkwMjBlNjZlNzZkZmEzYTk4M2I5ZTQiLCJpYXQiOjE2MjA5MTM4NDQsIm5iZiI6MTYyMDkxMzg0NCwiZXhwIjoxNjUyNDQ5ODQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kOz5pMvLbAfsih7Gqig_bco-YclF5c6y5vGnOWMDBNHZFlrl5f6vgOzdFz1b1JGb1docINyP6kUxJBg4_mXnhuy5ETnWxS3T_K6RIjNi_gHs3DK4O_ztBQcHuH4tmUKnyu4IwAenISXA38Okkh165N5rdV0kedLg3xBLY2WppJ_4gpD7ANwxGle3mOEMw6Ra9525n4bZjYoGwGhkxdYX9xZdTtxdv6BvjmRLazV0K5T_a2TdvdCKLx6Cn1TbHFkq6O-6kD-g4QarvDG-4QcJjLmd_TmP6BReelUI0s30YhsI61A7VYK-N-MiQyCIu8hDnsMrUUbfJn2WalnLDoqbhVotNZ4xUBGN386NahJGF9xI-TChXo1wufoIbxXJ6RPI57qpJaUHwA3Qhqb_m7206vD3uOzYQ2dGfRyFIr-ETHqjgMCOxy9zTeTlat90yHghZwOhw5niPW4PZ-blBz8i2PayrguwybZ_GZgjXwjKdZLmQDlupwoBiOVZFG6yOWD7q9ZKpZ2ejoyZkGOsdyq3U0sZKc1NPH_TqyIl61fXr4crewlylNihcnAv0eTLO-bR6hkbfWstRzGDobsoHRIc-Zx_WJ5EdKqdmiVGdck7BcLwHZ21bV-IR7iU0VIrzQX03zaBIWOpbKEj26aUUrOyit1RNgPeMOQpKQhvzv6UQ-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "transaction 1",
+									"type": "text"
+								},
+								{
+									"key": "detail",
+									"value": "transaction detail 1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/brs/public/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"brs",
+								"public",
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transaction Import",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWFkNmQ4YzEyZTI4NDFmNDJhMGMyMjljNzRiOTQ3MmE3YmYyYTcxOTFlMzNjOWZjMTM2MDU0NDg1MjkwMjBlNjZlNzZkZmEzYTk4M2I5ZTQiLCJpYXQiOjE2MjA5MTM4NDQsIm5iZiI6MTYyMDkxMzg0NCwiZXhwIjoxNjUyNDQ5ODQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kOz5pMvLbAfsih7Gqig_bco-YclF5c6y5vGnOWMDBNHZFlrl5f6vgOzdFz1b1JGb1docINyP6kUxJBg4_mXnhuy5ETnWxS3T_K6RIjNi_gHs3DK4O_ztBQcHuH4tmUKnyu4IwAenISXA38Okkh165N5rdV0kedLg3xBLY2WppJ_4gpD7ANwxGle3mOEMw6Ra9525n4bZjYoGwGhkxdYX9xZdTtxdv6BvjmRLazV0K5T_a2TdvdCKLx6Cn1TbHFkq6O-6kD-g4QarvDG-4QcJjLmd_TmP6BReelUI0s30YhsI61A7VYK-N-MiQyCIu8hDnsMrUUbfJn2WalnLDoqbhVotNZ4xUBGN386NahJGF9xI-TChXo1wufoIbxXJ6RPI57qpJaUHwA3Qhqb_m7206vD3uOzYQ2dGfRyFIr-ETHqjgMCOxy9zTeTlat90yHghZwOhw5niPW4PZ-blBz8i2PayrguwybZ_GZgjXwjKdZLmQDlupwoBiOVZFG6yOWD7q9ZKpZ2ejoyZkGOsdyq3U0sZKc1NPH_TqyIl61fXr4crewlylNihcnAv0eTLO-bR6hkbfWstRzGDobsoHRIc-Zx_WJ5EdKqdmiVGdck7BcLwHZ21bV-IR7iU0VIrzQX03zaBIWOpbKEj26aUUrOyit1RNgPeMOQpKQhvzv6UQ-Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mycsv",
+									"type": "file",
+									"src": "/C:/Users/chienktv90/Desktop/brs50k.xlsx",
+									"disabled": true
+								},
+								{
+									"key": "mycsv",
+									"type": "file",
+									"src": "/C:/Users/chienktv90/Desktop/brs50k.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/brs/public/api/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"brs",
+								"public",
+								"api",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transaction Batch Show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWFkNmQ4YzEyZTI4NDFmNDJhMGMyMjljNzRiOTQ3MmE3YmYyYTcxOTFlMzNjOWZjMTM2MDU0NDg1MjkwMjBlNjZlNzZkZmEzYTk4M2I5ZTQiLCJpYXQiOjE2MjA5MTM4NDQsIm5iZiI6MTYyMDkxMzg0NCwiZXhwIjoxNjUyNDQ5ODQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kOz5pMvLbAfsih7Gqig_bco-YclF5c6y5vGnOWMDBNHZFlrl5f6vgOzdFz1b1JGb1docINyP6kUxJBg4_mXnhuy5ETnWxS3T_K6RIjNi_gHs3DK4O_ztBQcHuH4tmUKnyu4IwAenISXA38Okkh165N5rdV0kedLg3xBLY2WppJ_4gpD7ANwxGle3mOEMw6Ra9525n4bZjYoGwGhkxdYX9xZdTtxdv6BvjmRLazV0K5T_a2TdvdCKLx6Cn1TbHFkq6O-6kD-g4QarvDG-4QcJjLmd_TmP6BReelUI0s30YhsI61A7VYK-N-MiQyCIu8hDnsMrUUbfJn2WalnLDoqbhVotNZ4xUBGN386NahJGF9xI-TChXo1wufoIbxXJ6RPI57qpJaUHwA3Qhqb_m7206vD3uOzYQ2dGfRyFIr-ETHqjgMCOxy9zTeTlat90yHghZwOhw5niPW4PZ-blBz8i2PayrguwybZ_GZgjXwjKdZLmQDlupwoBiOVZFG6yOWD7q9ZKpZ2ejoyZkGOsdyq3U0sZKc1NPH_TqyIl61fXr4crewlylNihcnAv0eTLO-bR6hkbfWstRzGDobsoHRIc-Zx_WJ5EdKqdmiVGdck7BcLwHZ21bV-IR7iU0VIrzQX03zaBIWOpbKEj26aUUrOyit1RNgPeMOQpKQhvzv6UQ-Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/brs/public/api/batch?id=936d3c60-4bde-4d49-8217-1fa7204fb95c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"brs",
+								"public",
+								"api",
+								"batch"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "936d3c60-4bde-4d49-8217-1fa7204fb95c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWFkNmQ4YzEyZTI4NDFmNDJhMGMyMjljNzRiOTQ3MmE3YmYyYTcxOTFlMzNjOWZjMTM2MDU0NDg1MjkwMjBlNjZlNzZkZmEzYTk4M2I5ZTQiLCJpYXQiOjE2MjA5MTM4NDQsIm5iZiI6MTYyMDkxMzg0NCwiZXhwIjoxNjUyNDQ5ODQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kOz5pMvLbAfsih7Gqig_bco-YclF5c6y5vGnOWMDBNHZFlrl5f6vgOzdFz1b1JGb1docINyP6kUxJBg4_mXnhuy5ETnWxS3T_K6RIjNi_gHs3DK4O_ztBQcHuH4tmUKnyu4IwAenISXA38Okkh165N5rdV0kedLg3xBLY2WppJ_4gpD7ANwxGle3mOEMw6Ra9525n4bZjYoGwGhkxdYX9xZdTtxdv6BvjmRLazV0K5T_a2TdvdCKLx6Cn1TbHFkq6O-6kD-g4QarvDG-4QcJjLmd_TmP6BReelUI0s30YhsI61A7VYK-N-MiQyCIu8hDnsMrUUbfJn2WalnLDoqbhVotNZ4xUBGN386NahJGF9xI-TChXo1wufoIbxXJ6RPI57qpJaUHwA3Qhqb_m7206vD3uOzYQ2dGfRyFIr-ETHqjgMCOxy9zTeTlat90yHghZwOhw5niPW4PZ-blBz8i2PayrguwybZ_GZgjXwjKdZLmQDlupwoBiOVZFG6yOWD7q9ZKpZ2ejoyZkGOsdyq3U0sZKc1NPH_TqyIl61fXr4crewlylNihcnAv0eTLO-bR6hkbfWstRzGDobsoHRIc-Zx_WJ5EdKqdmiVGdck7BcLwHZ21bV-IR7iU0VIrzQX03zaBIWOpbKEj26aUUrOyit1RNgPeMOQpKQhvzv6UQ-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWFkNmQ4YzEyZTI4NDFmNDJhMGMyMjljNzRiOTQ3MmE3YmYyYTcxOTFlMzNjOWZjMTM2MDU0NDg1MjkwMjBlNjZlNzZkZmEzYTk4M2I5ZTQiLCJpYXQiOjE2MjA5MTM4NDQsIm5iZiI6MTYyMDkxMzg0NCwiZXhwIjoxNjUyNDQ5ODQ0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kOz5pMvLbAfsih7Gqig_bco-YclF5c6y5vGnOWMDBNHZFlrl5f6vgOzdFz1b1JGb1docINyP6kUxJBg4_mXnhuy5ETnWxS3T_K6RIjNi_gHs3DK4O_ztBQcHuH4tmUKnyu4IwAenISXA38Okkh165N5rdV0kedLg3xBLY2WppJ_4gpD7ANwxGle3mOEMw6Ra9525n4bZjYoGwGhkxdYX9xZdTtxdv6BvjmRLazV0K5T_a2TdvdCKLx6Cn1TbHFkq6O-6kD-g4QarvDG-4QcJjLmd_TmP6BReelUI0s30YhsI61A7VYK-N-MiQyCIu8hDnsMrUUbfJn2WalnLDoqbhVotNZ4xUBGN386NahJGF9xI-TChXo1wufoIbxXJ6RPI57qpJaUHwA3Qhqb_m7206vD3uOzYQ2dGfRyFIr-ETHqjgMCOxy9zTeTlat90yHghZwOhw5niPW4PZ-blBz8i2PayrguwybZ_GZgjXwjKdZLmQDlupwoBiOVZFG6yOWD7q9ZKpZ2ejoyZkGOsdyq3U0sZKc1NPH_TqyIl61fXr4crewlylNihcnAv0eTLO-bR6hkbfWstRzGDobsoHRIc-Zx_WJ5EdKqdmiVGdck7BcLwHZ21bV-IR7iU0VIrzQX03zaBIWOpbKEj26aUUrOyit1RNgPeMOQpKQhvzv6UQ-Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/brs/public/api/transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"brs",
+								"public",
+								"api",
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
