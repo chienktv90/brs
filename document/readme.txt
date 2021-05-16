@@ -22,9 +22,12 @@ create database name brsdb or import database sample ready!
 
 
 3.3 open terminal run command
+
+npm install
+composer install
 php artisan key:generate
 php artisan migrate
-php artisan queue:work 
+php artisan queue:work
 
 (note: not kill or close windown when run command php artisan queue:work)
 
